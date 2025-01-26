@@ -16,7 +16,6 @@ export default function Contact() {
     const submitForm = async () => {
         toast.dismiss()
         if (!loader) {
-            setLoader(true)
             try {
                 validate_string(contactData.name, "name")
                 validate_string(contactData.email, "email")
@@ -26,6 +25,7 @@ export default function Contact() {
                 toast.error(error)
                 return
             }
+            setLoader(true)
             const params = JSON.stringify(contactData)
             const response = await fetchApi("/contact", params, "POST")
             setLoader(false)
