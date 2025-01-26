@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossOrigin="anonymous" referrerPolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossOrigin="anonymous" referrerPolicy="no-referrer"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-        <script src="/javascripts/script.js"></script>
       </head>
       <body className={inter.className}>
         <main>
@@ -41,6 +40,7 @@ export default function RootLayout({ children }) {
             {children}
           </div>
         </main>
+        <script src="javascripts/script.js"></script>
       </body>
     </html>
   );
