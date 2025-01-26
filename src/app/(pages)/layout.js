@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import "../../../public/stylesheets/style.css"
+import "../../../public/stylesheets/loader.css"
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +35,10 @@ export default function RootLayout({ children }) {
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
       </head>
       <body className={inter.className}>
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+        />
         <main>
           <Sidebar />
           <div className="main-content">
