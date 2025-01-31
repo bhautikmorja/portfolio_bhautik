@@ -1,6 +1,34 @@
+'use client'
+import EducativetModalContent from "@/components/Modal/Educative";
+import FinRightModalContent from "@/components/Modal/Finright";
+import Modal from "@/components/Modal/Modal";
+import RebevModalContent from "@/components/Modal/Rebev";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Portfolio() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentModal, setCurrentModal] = useState(null);
+
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+        return () => document.body.classList.remove("no-scroll");
+    }, [isModalOpen]);
+
+    const openModal = (modalContent) => {
+        setCurrentModal(modalContent);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setCurrentModal(null);
+    };
     return (
         <>
             <article className="portfolio active" data-page="portfolio">
@@ -35,10 +63,10 @@ export default function Portfolio() {
                     <ul className="project-list">
                         <li
                             className="project-item active"
-                            data-filter-item=""
+                            data-filter-item
                             data-category="web development"
                         >
-                            <Link href="/finright" target="”_blank”">
+                            <button onClick={() => openModal(<FinRightModalContent onClose={closeModal} />)} className="open-modal-btn">
                                 <figure className="project-img">
                                     <div className="project-item-icon-box">
                                         <ion-icon name="eye-outline" />
@@ -47,15 +75,14 @@ export default function Portfolio() {
                                 </figure>
                                 <h3 className="project-title">Finright</h3>
                                 <p className="project-category">Banking service app.</p>
-                            </Link>
+                            </button>
                         </li>
                         <li
                             className="project-item active"
                             data-filter-item=""
                             data-category="web development"
                         >
-                            <Link href="/rebev" target="”_blank”">
-                                {/* Changed href value to "#" */}
+                            <button onClick={() => openModal(<RebevModalContent onClose={closeModal} />)} className="open-modal-btn">
                                 <figure className="project-img">
                                     <div className="portfolio-links" />
                                     <div className="project-item-icon-box">
@@ -69,7 +96,7 @@ export default function Portfolio() {
                                 </figure>
                                 <h3 className="project-title">Rebev</h3>
                                 <p className="project-category">Resume Maker Web</p>
-                            </Link>
+                            </button>
                             <a
                                 href="/portfolio/rebev.html"
                                 data-gallery="portfolioDetailsGallery"
@@ -85,7 +112,7 @@ export default function Portfolio() {
                             data-filter-item=""
                             data-category="web design"
                         >
-                            <Link href="/educative" target="”_blank”">
+                            <button onClick={() => openModal(<EducativetModalContent onClose={closeModal} />)} className="open-modal-btn">
                                 <figure className="project-img">
                                     <div className="project-item-icon-box">
                                         <ion-icon name="eye-outline" />
@@ -98,11 +125,14 @@ export default function Portfolio() {
                                 </figure>
                                 <h3 className="project-title">Educative</h3>
                                 <p className="project-category">Developer Larning Plateform</p>
-                            </Link>
+                            </button>
                         </li>
                     </ul>
                 </section>
             </article>
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+                {currentModal}
+            </Modal>
         </>
     )
 }
