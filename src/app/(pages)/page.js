@@ -97,10 +97,10 @@ export default function About() {
           freeMode={true}
           loop={true}
           speed={5000}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 0,
+          //   disableOnInteraction: false,
+          // }}
           modules={[FreeMode, Autoplay]}
           breakpoints={{
             1024: {
@@ -118,7 +118,7 @@ export default function About() {
               <img
                 src="/images/logo/nestjs.png"
                 alt="nestjs logo"
-                width={85}
+                width={86}
               />
               <h4 className="h4 skill-text">
                 NestJS
@@ -159,7 +159,7 @@ export default function About() {
               <img
                 src="/images/logo/reactnative.png"
                 alt="mobile app icon"
-                width={123}
+                width={126}
               />
               <h4 className="h4 skill-text">
                 React Native
@@ -241,7 +241,7 @@ export default function About() {
               <img
                 src="/images/logo/javascript.png"
                 alt="mobile app icon"
-                width={73}
+                width={74}
               />
               <h4 className="h4 skill-text">
                 JavaScript
