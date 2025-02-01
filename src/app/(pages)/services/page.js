@@ -8,7 +8,7 @@ export default function Services() {
                 <section className="blog-posts">
                     <ul className="blog-posts-list">
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/my.jpg"
@@ -27,7 +27,25 @@ export default function Services() {
                             </a>
                         </li>
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
+                                <figure className="blog-banner-box">
+                                    <img
+                                        src="/images/blog-8.png"
+                                        alt="Best fonts every designer"
+                                        loading="lazy"
+                                    />
+                                </figure>
+                                <div className="blog-content">
+                                    <div className="blog-meta" />
+                                    <h3 className="h3 blog-item-title">App Development</h3>
+                                    <p className="blog-text">
+                                        Full app development from scratch to deployment with ads integration & more.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li className="blog-post-item">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/blog-2.jpg"
@@ -45,7 +63,7 @@ export default function Services() {
                             </a>
                         </li>
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/blog-3.jpg"
@@ -63,7 +81,7 @@ export default function Services() {
                             </a>
                         </li>
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/blog-4.jpg"
@@ -82,7 +100,7 @@ export default function Services() {
                             </a>
                         </li>
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/my1.png"
@@ -102,7 +120,7 @@ export default function Services() {
                             </a>
                         </li>
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/blog-6.jpg"
@@ -121,7 +139,7 @@ export default function Services() {
                             </a>
                         </li>
                         <li className="blog-post-item">
-                            <a href="#" onClick="return false;">
+                            <a href="#">
                                 <figure className="blog-banner-box">
                                     <img
                                         src="/images/my2.jpg"

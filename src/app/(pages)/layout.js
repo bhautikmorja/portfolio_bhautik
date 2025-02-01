@@ -4,6 +4,11 @@ import "../../../public/stylesheets/loader.css"
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/autoplay';
+import 'swiper/css/free-mode';
 
 const inter = Inter({ subsets: ["latin"] });
 

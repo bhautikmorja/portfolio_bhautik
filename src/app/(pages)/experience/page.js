@@ -17,7 +17,7 @@ export default function About() {
                             <h3 className="h3 timeline-item-title">
                                 Next.js Full-Stack Developer at Rain Infotech PVT. LTD.
                             </h3>
-                            <span>Aug 2024 — Current</span>
+                            <span>Aug 2024 — Present</span>
                             <p className="timeline-text">
                                 <b style={{ color: "white" }}>Skills: </b> Third Party Payment
                                 Integration · Cross-platform Development · Firebase · REST APIs ·
@@ -38,7 +38,7 @@ export default function About() {
                         </li>
                         <li className="timeline-item">
                             <h3 className="h3 timeline-item-title">Freelancer Developer</h3>
-                            <span>Apr 2022 — current</span>
+                            <span>Apr 2022 — Present</span>
                             <p className="timeline-text">
                                 <b style={{ color: "white" }}>Skills: </b> Third Party Payment
                                 Integration · Cross-platform Development · Firebase · REST APIs ·

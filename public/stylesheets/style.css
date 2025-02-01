@@ -3357,3 +3357,42 @@ textarea.form-input::-webkit-resizer {
 .modal-margin-cust{
   margin-top: 10px;
 }
+
+
+.skill-item {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@media (max-width: 380px) {
+  .skill-text {
+   font-size: 12px !important;
+  }
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.skill-icon{
+  height: 41px;
+  width: 41px;
+}

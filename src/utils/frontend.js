@@ -3,7 +3,6 @@ export async function fetchApi(url, data, method = "POST") {
         let param = JSON.parse(data)
         let queryString = method === "GET" ? Object.keys(param).map(key => key + '=' + param[key]).join('&') : '';
         let apiUrl = process.env.API_ENDPOINT + url + (queryString ? '?' + queryString : '');
-        console.log("apiUrl===>", apiUrl)
         let resData = await fetch(apiUrl, {
             method: method,
             headers: {

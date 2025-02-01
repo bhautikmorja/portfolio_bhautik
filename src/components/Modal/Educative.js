@@ -1,3 +1,6 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+
 export default function EducativetModalContent({ onClose }) {
     return (
         <>
@@ -8,32 +11,50 @@ export default function EducativetModalContent({ onClose }) {
                 </button>
             </header>
             <section className="modal-body">
-                <div className="portfolio-details-slider swiper">
-                    <div className="swiper-wrapper align-items-center">
-                        <div className="swiper-slide">
-                            <img
-                                src="../images/portfolio/educative/2.png"
-                                alt="Educative Project"
-                                className="img-fluid image-custom-size"
-                            />
-                        </div>
-                        <div className="swiper-slide">
-                            <img
-                                src="../images/portfolio/educative/1.png"
-                                alt="Educative Project"
-                                className="img-fluid image-custom-size"
-                            />
-                        </div>
-                        <div className="swiper-slide">
-                            <img
-                                src="../images/portfolio/educative/3.png"
-                                alt="Educative Project"
-                                className="img-fluid image-custom-size"
-                            />
-                        </div>
-                    </div>
-                    <div className="swiper-pagination" />
-                </div>
+                <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    modules={[EffectCoverflow, Pagination, Autoplay]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide>
+                        <img
+                            src="/images/portfolio/educative/2.png"
+                            alt="Educative Project"
+                            className="img-fluid image-custom-size"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src="/images/portfolio/educative/1.png"
+                            alt="Educative Project"
+                            className="img-fluid image-custom-size"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src="/images/portfolio/educative/3.png"
+                            alt="Educative Project"
+                            className="img-fluid image-custom-size"
+                        />
+                    </SwiperSlide>
+                </Swiper>
+
                 <div className="portfolio-info">
                     <ul>
                         <li className="modal-mt text-white">

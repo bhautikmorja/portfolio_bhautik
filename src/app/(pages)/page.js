@@ -1,4 +1,8 @@
 'use client'
+
+import { FreeMode, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 export default function About() {
   return (
     <>
@@ -26,7 +30,7 @@ export default function About() {
                 />
               </div>
               <div className="service-content-box">
-                <h4 className="h4 service-item-title">
+                <h4 className="h4">
                   Web Development
                 </h4>
                 <p className="service-item-text">
@@ -87,23 +91,165 @@ export default function About() {
             </li>
           </ul>
         </section>
-        <section className="askill">
-          <h3 className="h3 service-title">Skills</h3>
-          <ol className="askill-list">
-            <li className="askill-item">Next.js</li>
-            <li className="askill-item">NestJS</li>
-            <li className="askill-item">React Native</li>
-            <li className="askill-item">Node.js</li>
-            <li className="askill-item">ReactJS</li>
-            <li className="askill-item">Express.js</li>
-            <li className="askill-item">Javascript</li>
-            <li className="askill-item">Typescript</li>
-            <li className="askill-item">MongoDB</li>
-            <li className="askill-item">mysql</li>
-            <li className="askill-item">Third Party Payment Integration</li>
-            <li className="askill-item">Database Management</li>
-          </ol>
-        </section>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={15}
+          freeMode={true}
+          loop={true}
+          speed={5000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          modules={[FreeMode, Autoplay]}
+          breakpoints={{
+            1024: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
+          className="mySwiper"
+        >
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/nestjs.png"
+                alt="nestjs logo"
+                width={85}
+              />
+              <h4 className="h4 skill-text">
+                NestJS
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/reactjs.png"
+                alt="mobile app icon"
+                width={85}
+                className='skill-icon'
+              />
+              <h4 className="h4 skill-text">
+                ReactJS
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/nextjs.png"
+                alt="mobile app icon"
+                width={85}
+                className='skill-icon'
+              />
+              <h4 className="h4 skill-text">
+                Next.js
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/reactnative.png"
+                alt="mobile app icon"
+                width={123}
+              />
+              <h4 className="h4 skill-text">
+                React Native
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/nodejs.png"
+                alt="mobile app icon"
+                width={76}
+              />
+              <h4 className="h4 skill-text">
+                Node.js
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/express.png"
+                alt="mobile app icon"
+                width={85}
+                className='skill-icon'
+              />
+              <h4 className="h4 skill-text">
+                Express.js
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/mongodb.png"
+                alt="mobile app icon"
+                width={85}
+                className='skill-icon'
+              />
+              <h4 className="h4 skill-text">
+                mongo DB
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/mysql.png"
+                alt="mobile app icon"
+                width={85}
+                className='skill-icon'
+              />
+              <h4 className="h4 skill-text">
+                MySQL
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/typescript.png"
+                alt="mobile app icon"
+                width={85}
+                className='skill-icon'
+              />
+              <h4 className="h4 skill-text">
+                TypeScript
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="skill-item">
+              <img
+                src="/images/logo/javascript.png"
+                alt="mobile app icon"
+                width={73}
+              />
+              <h4 className="h4 skill-text">
+                JavaScript
+              </h4>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+
         <div className="modal-container" data-modal-container="">
           <div className="overlay" data-overlay="" />
           <section className="testimonials-modal">
