@@ -97,10 +97,10 @@ export default function About() {
           freeMode={true}
           loop={true}
           speed={5000}
-          // autoplay={{
-          //   delay: 0,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
           modules={[FreeMode, Autoplay]}
           breakpoints={{
             1024: {
