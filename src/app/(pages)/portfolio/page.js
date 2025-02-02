@@ -3,6 +3,7 @@ import EducativetModalContent from "@/components/Modal/Educative";
 import FinRightModalContent from "@/components/Modal/Finright";
 import Modal from "@/components/Modal/Modal";
 import RebevModalContent from "@/components/Modal/Rebev";
+import WevaletModalContent from "@/components/Modal/Wevalet";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -71,7 +72,7 @@ export default function Portfolio() {
                                     <div className="project-item-icon-box">
                                         <ion-icon name="eye-outline" />
                                     </div>
-                                    <img src="/images/project-1.png" alt="finance" loading="lazy" />
+                                    <img src="/images/portfolio/finright/project-1.PNG" alt="finance" loading="lazy" />
                                 </figure>
                                 <h3 className="project-title">Finright</h3>
                                 <p className="project-category">Banking service app.</p>
@@ -89,7 +90,7 @@ export default function Portfolio() {
                                         <ion-icon name="eye-outline" />
                                     </div>
                                     <img
-                                        src="/images/project-2.png"
+                                        src="/images/portfolio/rebev/project-2.png"
                                         alt="resume maker"
                                         loading="lazy"
                                     />
@@ -118,13 +119,33 @@ export default function Portfolio() {
                                         <ion-icon name="eye-outline" />
                                     </div>
                                     <img
-                                        src="/images/project-3.png"
+                                        src="/images/portfolio/educative/2.png"
                                         alt="Educative"
                                         loading="lazy"
                                     />
                                 </figure>
                                 <h3 className="project-title">Educative</h3>
                                 <p className="project-category">Developer Larning Plateform</p>
+                            </button>
+                        </li>
+                        <li
+                            className="project-item active"
+                            data-filter-item=""
+                            data-category="web design"
+                        >
+                            <button onClick={() => openModal(<WevaletModalContent onClose={closeModal} />)} className="open-modal-btn">
+                                <figure className="project-img">
+                                    <div className="project-item-icon-box">
+                                        <ion-icon name="eye-outline" />
+                                    </div>
+                                    <img
+                                        src="/images/portfolio/wevalet/main.png"
+                                        alt="Educative"
+                                        loading="lazy"
+                                    />
+                                </figure>
+                                <h3 className="project-title">WeValet</h3>
+                                <p className="project-category">Smart Valet System</p>
                             </button>
                         </li>
                     </ul>
