@@ -13,6 +13,18 @@ export default function About() {
                         <h3 className="h3" />
                     </div>
                     <ol className="timeline-list">
+          <li className="timeline-item">
+                            <h3 className="h3 timeline-item-title">
+                                Next.js Full-Stack Developer at Shreeji Consultant Technology
+                            </h3>
+                            <span>Aug 2024 — Present</span>
+                            <p className="timeline-text">
+                                <b style={{ color: "white" }}>Skills: </b> Third Party API
+                                Integration · Cross-platform Development · Firebase · REST APIs ·
+                                Google API · MongoDB · mysql · Express.js · Data Management · Next.js · React.js
+                                · Typescript · PostGreSQL · AWS S3 · Docker · Git 
+                            </p>
+                        </li>
                         <li className="timeline-item">
                             <h3 className="h3 timeline-item-title">
                                 Next.js Full-Stack Developer at Rain Infotech PVT. LTD.
